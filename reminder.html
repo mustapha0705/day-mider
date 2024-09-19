@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,48 +11,59 @@
         body {
             background-color: #e6e6fa;
         }
+
         .container {
             margin-top: 50px;
         }
+
         .form-title {
-            color: #f0c419;
+            color: #36454F;
             font-weight: bold;
         }
+
         .section-title {
             color: #36454F;
             font-weight: bold;
             margin-top: 20px;
         }
+
         .custom-checkbox {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
+
         .custom-checkbox label {
             margin-left: 10px;
             color: #36454F;
         }
-        .btn-save, .btn-cancel {
+
+        .btn-save,
+        .btn-cancel {
             margin-top: 20px;
             margin-right: 10px;
-            background-color: #6A0DAD;
+            /* background-color: #6A0DAD; */
             color: #FFFFFF;
         }
+
         .btn-cancel {
             background-color: #228B22;
         }
-        select.form-control, .custom-select {
+
+        select.form-control,
+        .custom-select {
             display: inline-block;
             width: auto;
             margin-right: 10px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Form Title -->
         <h2 class="form-title">Custom Reminder Settings</h2>
-        
+
         <!-- Notification Preferences -->
         <div class="section-title">Notification Preference</div>
         <div class="form-group">
@@ -68,7 +80,7 @@
                 <label for="push">Push Notifications</label>
             </div>
         </div>
-        
+
         <!-- Custom Reminder Settings -->
         <div class="section-title">Custom Reminder Settings</div>
         <div class="form-group">
@@ -79,7 +91,7 @@
                 <option>3</option>
             </select>
         </div>
-        
+
         <!-- Reminder Times -->
         <div class="section-title">Reminder times</div>
         <div class="form-group">
@@ -93,41 +105,41 @@
                 <option>Notification 3 time</option>
             </select>
         </div>
-        
+
         <!-- Reminder Intervals -->
         <div class="section-title">Reminder Intervals</div>
         <div class="form-group">
             <div>
-                Every <select class="custom-select">
+                Every <select class="custom-select mb-3">
                     <option>15 minutes</option>
                     <option>30 minutes</option>
                     <option>45 minutes</option>
-                </select> Till 
-                <select class="custom-select">
+                </select> Till
+                <select class="custom-select mb-3">
                     <option>08:00</option>
                     <option>09:00</option>
                     <option>10:00</option>
                 </select>
             </div>
             <div>
-                Every <select class="custom-select">
+                Every <select class="custom-select mb-3">
                     <option>1 hour</option>
                     <option>2 hours</option>
                     <option>3 hours</option>
-                </select> Till 
-                <select class="custom-select">
+                </select> Till
+                <select class="custom-select mb-3">
                     <option>00:00</option>
                     <option>01:00</option>
                     <option>02:00</option>
                 </select>
             </div>
             <div>
-                Every <select class="custom-select">
+                Every <select class="custom-select mb-3">
                     <option>3 hours</option>
                     <option>4 hours</option>
                     <option>5 hours</option>
-                </select> Till 
-                <select class="custom-select">
+                </select> Till
+                <select class="custom-select mb-3">
                     <option>14:00</option>
                     <option>15:00</option>
                     <option>16:00</option>
@@ -136,13 +148,21 @@
         </div>
 
         <!-- Save and Cancel Buttons -->
-        <button class="btn btn-save">Save</button>
-        <button class="btn btn-cancel">Cancel</button>
+        <button class="btn btn-save" style="background-color: #6A0DAD;">Save</button>
+        <button class="btn btn-cancel" style="background-color: #6A0DAD;">Cancel</button>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="lead">&copy; 2024 | All Rights Reserved - DayMinder</p>
+        </div>
+    </footer>
 
     <!-- Bootstrap and FontAwesome JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
