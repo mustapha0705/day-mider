@@ -7,9 +7,15 @@
     <title>Settings & Profile - DayMinder</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #e6e6fa;
+        }
+
+        .ch-body {
+            width: 70%;
+            margin: 0 auto;
         }
 
         .container {
@@ -17,22 +23,33 @@
         }
 
         .form-title {
-            color: #f0c419;
+            color: #36454F;
             font-weight: bold;
+            /* margin-right: 10px; */
+        }
+
+        /* Ensure all labels have the same fixed width */
+        .label-width {
+            width: 120px;
+            /* You can adjust this width based on your preference */
+            text-align: right;
+            margin-right: 15px;
         }
 
         .profile-section {
-            display: flex;
-            align-items: center;
             margin-bottom: 20px;
         }
 
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #36454F;
-            margin-right: 20px;
+        /* Flexbox and alignment for each form group */
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            flex-grow: 1;
+            /* This ensures the input fields take up remaining space */
         }
 
         .btn-change-pic,
@@ -45,13 +62,10 @@
             color: #FFFFFF;
         }
 
-        .btn-back {
-            background-color: #FF6F61;
-            color: #FFFFFF;
-        }
-
+        .btn-back,
         .btn-change {
             background-color: #228B22;
+            color: #FFFFFF;
         }
 
         .btn-save,
@@ -59,8 +73,21 @@
             margin-top: 20px;
         }
 
-        .notification-preference label {
-            margin-left: 10px;
+        .notification-preference {
+            margin-top: 20px;
+        }
+
+        .custom-checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .custom-checkbox input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .custom-checkbox label {
             color: #36454F;
         }
     </style>
@@ -76,51 +103,58 @@
         </div>
 
         <!-- Profile Section -->
-        <div class="profile-section">
-            <div>
-                <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic">
-                <button class="btn btn-change-pic mt-2">Change</button>
-            </div>
-            <div>
-                <div class="form-group d-flex align-items-center">
-                    <label for="username" class="mr-3">Username</label>
-                    <input type="text" id="username" class="form-control w-50" value="Username123">
-                    <button class="btn btn-change ml-2">Change</button>
-                </div>
-                <div class="form-group d-flex align-items-center">
-                    <label for="email" class="mr-3">Email</label>
-                    <input type="email" id="email" class="form-control w-50" value="email@provider.com">
-                    <button class="btn btn-change ml-2">Change</button>
-                </div>
-                <div class="form-group d-flex align-items-center">
-                    <label for="password" class="mr-3">Password</label>
-                    <input type="password" id="password" class="form-control w-50" value="********">
-                    <button class="btn btn-change ml-2">Change</button>
+        <section class="ch-body mt-5">
+            <div class="profile-section">
+                <div>
+                    <div class="form-group d-flex align-items-center">
+                        <label for="username" class="label-width">Username</label>
+                        <input type="text" id="username" class="form-control w-50" value="Username123">
+                        <button class="btn btn-change ml-2">Change</button>
+                    </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label for="email" class="label-width">Email</label>
+                        <input type="email" id="email" class="form-control w-50" value="email@provider.com">
+                        <button class="btn btn-change ml-2">Change</button>
+                    </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label for="password" class="label-width">Password</label>
+                        <input type="password" id="password" class="form-control w-50" value="********">
+                        <button class="btn btn-change ml-2">Change</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Default Notification Preference -->
-        <h4 style="color: #f0c419;">Default Notification Preference (Applies when none is set)</h4>
-        <div class="form-group">
-            <div class="custom-checkbox">
-                <input type="checkbox" id="notif-email" class="form-check-input">
-                <label for="notif-email">Email</label>
+            <!-- Default Notification Preference -->
+            <h4 style="color: #36454F; margin-top: 30px;">Default Notification Preference (Applies when none is set)
+            </h4>
+            <div class="notification-preference">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="notif-email" class="form-check-input">
+                    <label for="notif-email">Email</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="notif-sms" class="form-check-input">
+                    <label for="notif-sms">SMS</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="notif-push" class="form-check-input">
+                    <label for="notif-push">Push Notifications</label>
+                </div>
             </div>
-            <div class="custom-checkbox">
-                <input type="checkbox" id="notif-sms" class="form-check-input">
-                <label for="notif-sms">SMS</label>
-            </div>
-            <div class="custom-checkbox">
-                <input type="checkbox" id="notif-push" class="form-check-input">
-                <label for="notif-push">Push Notifications</label>
-            </div>
-        </div>
 
-        <!-- Save and Delete Buttons -->
-        <button class="btn btn-save">Save Changes</button>
-        <button class="btn btn-delete">Delete Account</button>
+
+            <!-- Save and Delete Buttons -->
+            <button class="btn btn-save">Save Changes</button>
+            <button class="btn btn-delete">Delete Account</button>
+        </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="lead">&copy; 2024 | All Rights Reserved - DayMinder</p>
+        </div>
+    </footer>
 
     <!-- Bootstrap and FontAwesome JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
