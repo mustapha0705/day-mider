@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Task/Event - DayMinder</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e6e6fa;
+            color: #36454F;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .form-title {
+            color: #36454F;
+            font-weight: bold;
+        }
+
+        .form-group label {
+            margin-top: 10px;
+        }
+
+        .btn-save,
+        .btn-cancel,
+        .btn-set-reminders {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .time-picker {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Title -->
+        <h2 class="form-title text-center">New Task/Event</h2>
+
+        <!-- Task/Event Form -->
+        <section class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="task-name">Title</label>
+                    <input type="text" id="task-name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="task-location">Task Location</label>
+                    <input type="text" id="task-location" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea id="task-description" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="task-date-time-start">Start Date & Time</label>
+                    <input type="datetime-local" id="task-date-time-start" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="task-date-time-end">End Date & Time</label>
+                    <input type="datetime-local" id="task-date-time-end" class="form-control">
+                </div>
+
+                <!-- Recurrence Dropdown -->
+                <div class="form-group">
+                    <label for="recurrence">Recurrence</label>
+                    <select id="recurrence" class="form-control w-25">
+                        <option>None</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                </div>
+
+                <!-- Save, Cancel, and Custom Reminders Buttons -->
+                <button class="btn btn-save" style="background-color: #6A0DAD; color: #FFFFFF;">Save</button>
+                <button class="btn btn-cancel" style="background-color: #6A0DAD; color: #FFFFFF;">Cancel</button>
+            </form>
+            <a href="reminder.html">
+                <button class="btn btn-set-reminders mt-3 mb-5" style="background-color: #98FF98; color: black;">Set Reminders</button>
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="lead">&copy; 2024 | All Rights Reserved - DayMinder</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and FontAwesome JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

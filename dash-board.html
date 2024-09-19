@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - DayMinder</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e6e6fa;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header h1 {
+            color: #f0c419;
+            margin: 0;
+        }
+
+        .task-list {
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #c2cbe4;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for individual task items */
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .task-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .task-actions i {
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .btn-add-task {
+            background-color: #6A0DAD;
+            color: #FFFFFF;
+            margin-top: 10px;
+        }
+
+        .text-color {
+            color: #36454F;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Header -->
+        <div class="header">
+            <h1 style="color: #36454F;">DayMinder</h1>
+            <div>
+                <a href="login.html"> <button class="btn btn-outline-primary"
+                        style="background-color: #FF6F61; color: #FFFFFF;">Log
+                        Out</button></a>
+                <a href="profile.html"><i class="fas fa-user-circle fa-2x ml-3"></i></a> <!-- Profile Icon -->
+            </div>
+        </div>
+        <p style="color: #36454F;">Simplify your day, master your schedule—DayMinder keeps you on track!</p>
+
+        <!-- Status Dropdown -->
+        <div class="form-group">
+            <select class="form-control w-25" style="color: #36454F;">
+                <option>Pending</option>
+                <option>Completed</option>
+            </select>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+            <h4 class="p-2" style="color: #36454F;">TASKS/EVENTS</h4>
+            <div class="task-item">
+                <span style="color: #36454F;">Task 1: Complete the assignment</span>
+                <div class="task-actions">
+                    <i class="fas fa-square" title="Mark as Completed" onclick="toggleCheck(this)"></i>
+                    <i class="fas fa-edit" title="Edit Task"></i>
+                    <i class="fas fa-trash" title="Delete Task"></i>
+                </div>
+            </div>
+            <div class="task-item">
+                <span style="color: #36454F;">Task 2: Attend meeting at 3 PM</span>
+                <div class="task-actions">
+                    <i class="fas fa-square" title="Mark as Completed" onclick="toggleCheck(this)"></i>
+                    <i class="fas fa-edit" title="Edit Task"></i>
+                    <i class="fas fa-trash" title="Delete Task"></i>
+                </div>
+            </div>
+            <div class="task-item">
+                <span style="color: #36454F;">Task 3: Grocery shopping</span>
+                <div class="task-actions">
+                    <i class="fas fa-square" title="Mark as Completed" onclick="toggleCheck(this)"></i>
+                    <i class="fas fa-edit" title="Edit Task"></i>
+                    <i class="fas fa-trash" title="Delete Task"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Task Button -->
+        <a href="new-task.html"> <button class="btn btn-add-task">Add Tasks</button>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="lead">&copy; 2024 | All Rights Reserved - DayMinder</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and FontAwesome -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleCheck(element) {
+            // Toggle between 'fa-square' and 'fa-check-square'
+            element.classList.toggle('fa-square');
+            element.classList.toggle('fa-check-square');
+        }
+    </script>
+</body>
+
+</html>
