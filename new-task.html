@@ -13,8 +13,6 @@
         }
 
         .form-container {
-            width: 50%;
-            margin: 0 auto;
             padding: 30px;
             background-color: #ffffff;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -55,48 +53,52 @@
         <h2 class="form-title text-center">New Task/Event</h2>
 
         <!-- Task/Event Form -->
-        <section class="form-container">
-            <form>
-                <div class="form-group">
-                    <label for="task-name">Title</label>
-                    <input type="text" id="task-name" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="task-location">Task Location</label>
-                    <input type="text" id="task-location" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="task-description">Description</label>
-                    <textarea id="task-description" class="form-control" rows="2"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="task-date-time-start">Start Date & Time</label>
-                    <input type="datetime-local" id="task-date-time-start" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="task-date-time-end">End Date & Time</label>
-                    <input type="datetime-local" id="task-date-time-end" class="form-control">
-                </div>
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2"> <!-- Full width on small screens, centered on medium+ -->
+                <section class="form-container">
+                    <form>
+                        <div class="form-group">
+                            <label for="task-name">Title</label>
+                            <input type="text" id="task-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-location">Task Location</label>
+                            <input type="text" id="task-location" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-description">Description</label>
+                            <textarea id="task-description" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-date-time-start">Start Date & Time</label>
+                            <input type="datetime-local" id="task-date-time-start" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-date-time-end">End Date & Time</label>
+                            <input type="datetime-local" id="task-date-time-end" class="form-control">
+                        </div>
 
-                <!-- Recurrence Dropdown -->
-                <div class="form-group">
-                    <label for="recurrence">Recurrence</label>
-                    <select id="recurrence" class="form-control w-25">
-                        <option>None</option>
-                        <option>Daily</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                    </select>
-                </div>
+                        <!-- Recurrence Dropdown -->
+                        <div class="form-group">
+                            <label for="recurrence">Recurrence</label>
+                            <select id="recurrence" class="form-control w-25">
+                                <option>None</option>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
 
-                <!-- Save, Cancel, and Custom Reminders Buttons -->
-                <button class="btn btn-save" style="background-color: #6A0DAD; color: #FFFFFF;">Save</button>
-                <button class="btn btn-cancel" style="background-color: #6A0DAD; color: #FFFFFF;">Cancel</button>
-            </form>
-            <a href="reminder.html">
-                <button class="btn btn-set-reminders mt-3 mb-5" style="background-color: #98FF98; color: black;">Set Reminders</button>
-            </a>
-        </section>
+                        <!-- Save, Cancel, and Custom Reminders Buttons -->
+                        <button type="submit" class="btn btn-save" style="background-color: #6A0DAD; color: #FFFFFF;">Save</button>
+                        <button type="button" class="btn btn-cancel" style="background-color: #6A0DAD; color: #FFFFFF;">Cancel</button>
+                    </form>
+                    <a href="reminder.html">
+                        <button class="btn btn-set-reminders mt-3 mb-5" style="background-color: #98FF98; color: black;">Set Reminders</button>
+                    </a>
+                </section>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
