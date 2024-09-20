@@ -24,10 +24,16 @@
             margin: 0;
         }
 
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
         .task-list {
             width: 100%;
             margin: 0 auto;
-            padding: 30px;
+            padding: 20px;
             background-color: #e6e6fa;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -64,6 +70,12 @@
         .text-color {
             color: #36454F;
         }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 24px; /* Reduce the size of the DayMinder text */
+            }
+        }
     </style>
 </head>
 
@@ -71,21 +83,25 @@
     <div class="container mt-5">
         <!-- Header -->
         <div class="header">
-            <h1 style="color: #36454F;">DayMinder</h1>
-            <div>
-                <a href="login.html"> <button class="btn btn-outline-primary"
-                        style="background-color: #FF6F61; color: #FFFFFF;">Log
-                        In</button></a>
-                <a href="signup.html"> <button class="btn btn-outline-primary"
-                        style="background-color: #FF6F61; color: #FFFFFF;">Sign Up</button></a>
-                <a href="profile.html"><i class="fas fa-user-circle fa-2x ml-3"></i></a> <!-- Profile Icon -->
+            <h1 class="display-4" style="color: #36454F;">DayMinder</h1>
+            <div class="btn-container">
+                <a href="login.html">
+                    <button class="btn btn-outline-primary" style="background-color: #FF6F61; color: #FFFFFF;">Log In</button>
+                </a>
+                <a href="signup.html">
+                    <button class="btn btn-outline-primary" style="background-color: #FF6F61; color: #FFFFFF;">Sign Up</button>
+                </a>
+                <a href="profile.html">
+                    <i class="fas fa-user-circle fa-2x ml-3"></i>
+                </a> <!-- Profile Icon -->
             </div>
         </div>
+
         <p style="color: #36454F;">Simplify your day, master your schedule—DayMinder keeps you on track!</p>
 
         <!-- Status Dropdown -->
         <div class="form-group">
-            <select class="form-control w-25" style="color: #36454F;">
+            <select class="form-control w-50 w-md-25" style="color: #36454F;">
                 <option>Pending</option>
                 <option>Completed</option>
             </select>
@@ -121,7 +137,8 @@
         </div>
 
         <!-- Add Task Button -->
-        <a href="new-task.html"> <button class="btn btn-add-task">Add Tasks</button>
+        <a href="new-task.html">
+            <button class="btn btn-add-task">Add Tasks</button>
         </a>
     </div>
 
