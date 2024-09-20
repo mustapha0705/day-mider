@@ -38,12 +38,15 @@
         /* Reduce button size on smaller screens */
         @media (max-width: 576px) {
             .btn-custom {
-                padding: 0.3rem 0.75rem; /* Smaller padding for mobile */
-                font-size: 0.85rem; /* Smaller text size */
+                padding: 0.3rem 0.75rem;
+                /* Smaller padding for mobile */
+                font-size: 0.85rem;
+                /* Smaller text size */
             }
 
             .header h1 {
-                font-size: 16px; /* Reduce the size of the DayMinder text */
+                font-size: 16px;
+                /* Reduce the size of the DayMinder text */
             }
         }
 
@@ -77,7 +80,8 @@
         .task-actions {
             display: flex;
             justify-content: space-between;
-            width: 100px; /* Ensures spacing between icons */
+            width: 100px;
+            /* Ensures spacing between icons */
         }
 
         .task-actions i {
@@ -93,8 +97,10 @@
 
             .task-actions {
                 margin-top: 10px;
-                width: 100%; /* Ensure full width */
-                justify-content: space-between; /* Space out buttons on mobile */
+                width: 100%;
+                /* Ensure full width */
+                justify-content: space-between;
+                /* Space out buttons on mobile */
             }
         }
 
@@ -107,7 +113,6 @@
         .text-color {
             color: #36454F;
         }
-
     </style>
 </head>
 
@@ -115,7 +120,7 @@
     <div class="container mt-5">
         <!-- Header -->
         <div class="header">
-            <h3 class="display-6" style="color: #36454F;">DayMinder</h3>
+            <h1 class="display-6 d-none d-md-block" style="color: #36454F;">DayMinder</h1>
             <div class="btn-container">
                 <a href="login.html">
                     <button class="btn btn-custom">Log In</button>
