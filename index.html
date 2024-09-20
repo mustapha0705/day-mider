@@ -30,6 +30,23 @@
             align-items: center;
         }
 
+        .btn-custom {
+            background-color: #FF6F61;
+            color: #FFFFFF;
+        }
+
+        /* Reduce button size on smaller screens */
+        @media (max-width: 576px) {
+            .btn-custom {
+                padding: 0.3rem 0.75rem; /* Smaller padding for mobile */
+                font-size: 0.85rem; /* Smaller text size */
+            }
+
+            .header h1 {
+                font-size: 24px; /* Reduce the size of the DayMinder text */
+            }
+        }
+
         .task-list {
             width: 100%;
             margin: 0 auto;
@@ -56,9 +73,29 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
 
+        /* Action buttons will be spaced out using justify-content-between */
+        .task-actions {
+            display: flex;
+            justify-content: space-between;
+            width: 100px; /* Ensures spacing between icons */
+        }
+
         .task-actions i {
             cursor: pointer;
-            margin-left: 15px;
+        }
+
+        /* On mobile, stack task text and action buttons vertically */
+        @media (max-width: 576px) {
+            .task-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .task-actions {
+                margin-top: 10px;
+                width: 100%; /* Ensure full width */
+                justify-content: space-between; /* Space out buttons on mobile */
+            }
         }
 
         .btn-add-task {
@@ -71,11 +108,6 @@
             color: #36454F;
         }
 
-        @media (max-width: 576px) {
-            .header h1 {
-                font-size: 24px; /* Reduce the size of the DayMinder text */
-            }
-        }
     </style>
 </head>
 
@@ -86,10 +118,10 @@
             <h1 class="display-4" style="color: #36454F;">DayMinder</h1>
             <div class="btn-container">
                 <a href="login.html">
-                    <button class="btn btn-outline-primary" style="background-color: #FF6F61; color: #FFFFFF;">Log In</button>
+                    <button class="btn btn-custom">Log In</button>
                 </a>
                 <a href="signup.html">
-                    <button class="btn btn-outline-primary" style="background-color: #FF6F61; color: #FFFFFF;">Sign Up</button>
+                    <button class="btn btn-custom">Sign Up</button>
                 </a>
                 <a href="profile.html">
                     <i class="fas fa-user-circle fa-2x ml-3"></i>
