@@ -19,6 +19,7 @@
         .form-title {
             color: #36454F;
             font-weight: bold;
+            text-align: center;
         }
 
         .section-title {
@@ -49,106 +50,126 @@
             background-color: #228B22;
         }
 
-        select.form-control,
-        .custom-select {
-            display: inline-block;
-            width: auto;
-            margin-right: 10px;
+        /* Make inputs full width on small screens */
+        @media (max-width: 576px) {
+            .form-control {
+                width: 100% !important;
+            }
+        }
+
+        .full-width {
+            width: 100% !important;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Form Title -->
-        <h2 class="form-title">Custom Reminder Settings</h2>
+    <div class="container d-flex justify-content-center">
+        <div class="col-lg-8">
+            <!-- Form Title -->
+            <h2 class="form-title">Custom Reminder Settings</h2>
 
-        <!-- Notification Preferences -->
-        <div class="section-title">Notification Preference</div>
-        <div class="form-group">
-            <div class="custom-checkbox">
-                <input type="checkbox" id="email" class="form-check-input">
-                <label for="email">Email</label>
+            <!-- Notification Preferences -->
+            <div class="section-title">Notification Preference</div>
+            <div class="form-group">
+                <div class="custom-checkbox ml-3">
+                    <input type="checkbox" id="email" class="form-check-input">
+                    <label for="email">Email</label>
+                </div>
+                <div class="custom-checkbox ml-3">
+                    <input type="checkbox" id="sms" class="form-check-input">
+                    <label for="sms">SMS</label>
+                </div>
+                <div class="custom-checkbox ml-3">
+                    <input type="checkbox" id="push" class="form-check-input">
+                    <label for="push">Push Notifications</label>
+                </div>
             </div>
-            <div class="custom-checkbox">
-                <input type="checkbox" id="sms" class="form-check-input">
-                <label for="sms">SMS</label>
+
+            <!-- Custom Reminder Settings -->
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="section-title">Custom Reminder Settings</div>
+                    <div class="form-group">
+                        <label for="num-notifications" class="d-block" style="color: #36454F;">Number of Notifications</label>
+                        <select id="num-notifications" class="form-control full-width">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="custom-checkbox">
-                <input type="checkbox" id="push" class="form-check-input">
-                <label for="push">Push Notifications</label>
+
+            <!-- Reminder Times -->
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="section-title">Reminder Times</div>
+                    <div class="form-group">
+                        <select class="form-control full-width mb-2">
+                            <option>Notification 1 time</option>
+                        </select>
+                        <select class="form-control full-width mb-2">
+                            <option>Notification 2 time</option>
+                        </select>
+                        <select class="form-control full-width mb-2">
+                            <option>Notification 3 time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reminder Intervals -->
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="section-title">Reminder Intervals</div>
+                    <div class="form-group">
+                        <div>
+                            Every <select class="custom-select full-width mb-3">
+                                <option>15 minutes</option>
+                                <option>30 minutes</option>
+                                <option>45 minutes</option>
+                            </select> Till
+                            <select class="custom-select full-width mb-3">
+                                <option>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+                        </div>
+                        <div>
+                            Every <select class="custom-select full-width mb-3">
+                                <option>1 hour</option>
+                                <option>2 hours</option>
+                                <option>3 hours</option>
+                            </select> Till
+                            <select class="custom-select full-width mb-3">
+                                <option>00:00</option>
+                                <option>01:00</option>
+                                <option>02:00</option>
+                            </select>
+                        </div>
+                        <div>
+                            Every <select class="custom-select full-width mb-3">
+                                <option>3 hours</option>
+                                <option>4 hours</option>
+                                <option>5 hours</option>
+                            </select> Till
+                            <select class="custom-select full-width mb-3">
+                                <option>14:00</option>
+                                <option>15:00</option>
+                                <option>16:00</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Save and Cancel Buttons -->
+            <div class="d-flex justify-content-start">
+                <button class="btn btn-save" style="background-color: #6A0DAD;">Save</button>
+                <button class="btn btn-cancel" style="background-color: #6A0DAD;">Cancel</button>
             </div>
         </div>
-
-        <!-- Custom Reminder Settings -->
-        <div class="section-title">Custom Reminder Settings</div>
-        <div class="form-group">
-            <label for="num-notifications" class="d-block" style="color: #36454F;">Number of Notifications</label>
-            <select id="num-notifications" class="form-control w-25">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-        </div>
-
-        <!-- Reminder Times -->
-        <div class="section-title">Reminder times</div>
-        <div class="form-group">
-            <select class="form-control w-25 mb-2">
-                <option>Notification 1 time</option>
-            </select>
-            <select class="form-control w-25 mb-2">
-                <option>Notification 2 time</option>
-            </select>
-            <select class="form-control w-25 mb-2">
-                <option>Notification 3 time</option>
-            </select>
-        </div>
-
-        <!-- Reminder Intervals -->
-        <div class="section-title">Reminder Intervals</div>
-        <div class="form-group">
-            <div>
-                Every <select class="custom-select mb-3">
-                    <option>15 minutes</option>
-                    <option>30 minutes</option>
-                    <option>45 minutes</option>
-                </select> Till
-                <select class="custom-select mb-3">
-                    <option>08:00</option>
-                    <option>09:00</option>
-                    <option>10:00</option>
-                </select>
-            </div>
-            <div>
-                Every <select class="custom-select mb-3">
-                    <option>1 hour</option>
-                    <option>2 hours</option>
-                    <option>3 hours</option>
-                </select> Till
-                <select class="custom-select mb-3">
-                    <option>00:00</option>
-                    <option>01:00</option>
-                    <option>02:00</option>
-                </select>
-            </div>
-            <div>
-                Every <select class="custom-select mb-3">
-                    <option>3 hours</option>
-                    <option>4 hours</option>
-                    <option>5 hours</option>
-                </select> Till
-                <select class="custom-select mb-3">
-                    <option>14:00</option>
-                    <option>15:00</option>
-                    <option>16:00</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Save and Cancel Buttons -->
-        <button class="btn btn-save" style="background-color: #6A0DAD;">Save</button>
-        <button class="btn btn-cancel" style="background-color: #6A0DAD;">Cancel</button>
     </div>
 
     <!-- Footer -->
