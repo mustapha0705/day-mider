@@ -85,6 +85,50 @@
         .custom-checkbox label {
             color: #36454F;
         }
+
+        /* Media queries for small screens */
+        @media (max-width: 576px) {
+            .ch-body {
+                width: 100%;
+            }
+
+            .form-title {
+                font-size: 1.2rem;
+            }
+
+            .btn-back {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .form-group {
+                display: block;
+            }
+
+            .label-width {
+                text-align: left;
+                margin-bottom: 5px;
+            }
+
+            .form-control {
+                width: 100%;
+            }
+
+            .btn-change {
+                width: 100%;
+                margin-top: 5px;
+                margin-left: 0;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            .btn-save,
+            .btn-delete {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -93,7 +137,8 @@
         <!-- Title and Back Button -->
         <div class="d-flex justify-content-between">
             <h2 class="form-title">Settings & Profile</h2>
-            <a href="index.html"> <button class="btn btn-back">Back to Dashboard</button>
+            <a href="index.html">
+                <button class="btn btn-back">Back to Dashboard</button>
             </a>
         </div>
 
@@ -103,20 +148,19 @@
                 <div>
                     <div class="form-group d-flex align-items-center">
                         <label for="username" class="label-width">Username</label>
-                        <input type="text" id="username" class="form-control w-50" value="Username123">
+                        <input type="text" id="username" class="form-control" value="Username123">
                         <button class="btn btn-change ml-2">Change</button>
                     </div>
                     <div class="form-group d-flex align-items-center">
                         <label for="email" class="label-width">Email</label>
-                        <input type="email" id="email" class="form-control w-50" value="email@provider.com">
+                        <input type="email" id="email" class="form-control" value="email@provider.com">
                         <button class="btn btn-change ml-2">Change</button>
                     </div>
                 </div>
             </div>
 
             <!-- Default Notification Preference -->
-            <h4 style="color: #36454F; margin-top: 30px;">Default Notification Preference (Applies when none is set)
-            </h4>
+            <h4 style="color: #36454F; margin-top: 30px;">Default Notification Preference (Applies when none is set)</h4>
             <div class="notification-preference">
                 <div class="custom-checkbox">
                     <input type="checkbox" id="notif-email" class="form-check-input">
@@ -132,7 +176,6 @@
                 </div>
             </div>
 
-
             <!-- Save and Delete Buttons -->
             <button class="btn btn-save">Save Changes</button>
             <button class="btn btn-delete">Delete Account</button>
@@ -142,7 +185,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3 mt-5">
         <div class="container">
-            <p class="lead">&copy; 2024 | All Rights Reserved - DayMinder Hello world</p>
+            <p class="lead">&copy; 2024 | All Rights Reserved - DayMinder</p>
         </div>
     </footer>
 
