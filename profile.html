@@ -47,6 +47,20 @@
         .form-group.row .col-sm-2 {
             padding-bottom: 15px;
         }
+
+        @media (max-width: 576px) {
+            .form-title {
+                font-size: 1.5rem; /* Adjust size for mobile */
+            }
+
+            .notification-title {
+                font-size: 1.2rem; /* Adjust size for mobile */
+            }
+
+            .btn-change {
+                font-size: 0.9rem; /* Adjust size for mobile */
+            }
+        }
     </style>
 </head>
 
@@ -86,17 +100,17 @@
             </div>
 
             <!-- Default Notification Preference -->
-            <h4 class="text-color" style="margin-top: 30px;">Default Notification Preference (Applies when none is set)</h4>
+            <h4 class="text-color notification-title" style="margin-top: 30px;">Default Notification Preference (Applies when none is set)</h4>
             <div class="notification-preference">
-                <div class="custom-checkbox">
+                <div class="custom-checkbox ml-4">
                     <input type="checkbox" id="notif-email" class="form-check-input">
                     <label for="notif-email" class="text-color">Email</label>
                 </div>
-                <div class="custom-checkbox">
+                <div class="custom-checkbox ml-4">
                     <input type="checkbox" id="notif-sms" class="form-check-input">
                     <label for="notif-sms" class="text-color">SMS</label>
                 </div>
-                <div class="custom-checkbox">
+                <div class="custom-checkbox ml-4">
                     <input type="checkbox" id="notif-push" class="form-check-input">
                     <label for="notif-push" class="text-color">Push Notifications</label>
                 </div>
